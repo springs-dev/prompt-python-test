@@ -11,7 +11,7 @@ Follow these steps to set up and run the project:
 Clone the repository from GitLab:
 
 ```shell
-git clone https://your-gitlab-repo-url.git
+git clone https://github.com/springs-dev/prompt-python-test.git
 cd decision-making-process-formatter
 ```
 ### Set Up Virtual Environment
@@ -29,14 +29,11 @@ pip install -r requirements.txt
 ```
 ### Configure OpenAI API Key
 Copy the provided OpenAI API key and create a .env file like .env.sample in the project directory. Paste the key into the .env file:
-
-### Customize Input Text
-Open the main.py file and locate the Input_text variable at the end of the script. Replace the placeholder text with the decision-making process text you want to format.
-
-### Run the Script
-Run the main.py script to format the input text and save the result in a CSV file:
-
+### Run app
 ```shell
-python main.py
+python api.py
 ```
+### Customize Input Text
+In the context of using the API endpoint, you can send a POST request with a JSON payload containing the input_text to the /split-text endpoint. The API will process the input text, format it, and save the result in a CSV file.
+
 The resulting table will be saved in the actions.csv file.
